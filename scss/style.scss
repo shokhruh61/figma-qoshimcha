@@ -1,4 +1,6 @@
 $color-black: #292830;
+$color-orange: #FF7235;
+$color-gray: #BDBDBD;
 
 * {
     margin: 0;
@@ -34,6 +36,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 106px;
 
     a {
         color: $color-black;
@@ -57,6 +60,7 @@ a {
             font-size: 18px;
             font-weight: 400;
             line-height: 17.1px;
+            cursor: pointer;
 
             &:hover {
                 transform: scale(1.1);
@@ -68,10 +72,80 @@ a {
     }
 }
 
+// hero
+.hero__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 211px;
+
+    .hero__left {
+        h1 {
+            font-size: 96px;
+            font-weight: 700;
+            line-height: 96px;
+            color: $color-black;
+            margin-bottom: 20px;
+
+        }
+
+        p {
+
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 38.81px;
+            color: $color-gray;
+            margin-bottom: 40px;
+        }
+
+        button {
+            padding: 18px 24px;
+            align-items: center;
+            background: $color-orange;
+            border: none;
+            gap: 10px;
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 38.81px;
+            cursor: pointer;
+            transition: all 0.5s;
+            margin-right: 15px;
+
+            &:hover {
+                background-color: black;
+                box-shadow: -4px 19px 13px 6px rgba(34, 60, 80, 0.2);
+            }
+
+            &:active {
+                transform: scale(0.98);
+            }
+        }
+
+        a {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 38.81px;
+            color: $color-gray;
+        }
+
+
+    }
+
+}
+
+.hero__right {
+    img {
+        width: 538px;
+        height: 478px;
+    }
+}
+
 @media screen and (max-width:1140px) {
 
     .header__container {
-        padding: 35px;
+        padding: 0 35px;
 
         a {
             font-size: 17px;
@@ -88,12 +162,46 @@ a {
         }
     }
 
+    .hero__container {
+        padding: 0 35px;
+
+        .hero__left {
+            h1 {
+                font-size: 82px;
+                line-height: 82px;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 22px;
+            }
+
+            button {
+                padding: 15px 20px;
+                font-size: 20px;
+                line-height: 34px;
+            }
+
+            a {
+                font-size: 24px;
+                line-height: 32px;
+            }
+        }
+    }
+
+    .hero__right {
+        img {
+            width: 480px;
+            height: 430px;
+        }
+    }
+
 }
 
 @media screen and (max-width:992px) {
 
     .header__container {
-        padding: 25px;
+        padding: 0 25px;
 
         .header_icon {
             width: 100px;
@@ -115,11 +223,44 @@ a {
         }
 
     }
+    .hero__container {
+        padding: 0 25px;
+
+        .hero__left {
+            h1 {
+                font-size: 62px;
+                line-height: 62px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            button {
+                padding: 13px 15px;
+                font-size: 18px;
+                line-height: 30px;
+            }
+
+            a {
+                font-size: 20px;
+                line-height: 28px;
+            }
+        }
+    }
+
+    .hero__right {
+        img {
+            width: 430px;
+            height: 350px;
+        }
+    }
 }
 
 @media screen and (max-width:768px) {
     .header__container {
-        padding: 20px;
+        padding: 0 20px;
 
         .header_icon {
             width: 85px;
@@ -145,8 +286,8 @@ a {
 
 @media screen and (max-width:576px) {
     .header__container {
-        padding: 15px;
-        flex-direction: column;
+        padding: 0 15px;
+
         gap: 33px;
 
         .header_icon {
@@ -154,11 +295,13 @@ a {
             height: 17px;
             align-items: center;
         }
-ul{
-    align-items: center;
-    gap: 10px;
-    flex-direction: column;
-}
+
+        ul {
+            align-items: center;
+            gap: 10px;
+            flex-direction: column;
+        }
+
         a {
             font-size: 10px;
             line-height: 10px;
@@ -167,7 +310,7 @@ ul{
 
         .head__btn {
             button {
-              display: none;
+                display: none;
             }
 
         }
