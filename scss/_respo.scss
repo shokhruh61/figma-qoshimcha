@@ -53,7 +53,7 @@
     }
 
     .card {
-        background-color: $color-orange;
+       background-color: $color-orange; 
     }
 
     .card__container {
@@ -129,15 +129,12 @@
 @media screen and (max-width:768px) {
     .header__container {
         padding: 0 20px;
-        flex-direction: column;
 
         .header_icon {
             width: 85px;
             height: 25px;
         }
-ul{
-    padding: 25px 0px;
-}
+
         a {
             font-size: 13px;
             line-height: 13px;
@@ -192,7 +189,7 @@ ul{
 @media screen and (max-width:576px) {
     .header__container {
         padding: 0 15px;
-        padding-left: 110px;
+
         gap: 33px;
 
         .header_icon {
@@ -222,7 +219,7 @@ ul{
     }
 
     .hero__container {
-        padding-left: 110px;
+        padding: 0 15px;
         flex-direction: column;
 
         .hero__left {
